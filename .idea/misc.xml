@@ -5,8 +5,14 @@
       <map>
         <entry key="app/src/main/res/drawable/bg_btn_blue_primary.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/drawable/bg_btn_white_primary.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/drawable/bg_gradient_primary_blue.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/drawable/bg_input_active.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/drawable/bg_input_edit.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/drawable/bg_input_satu.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/drawable/bg_layout_white.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/drawable/bg_overlay_getstarted.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/layout/activity_get_started.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_signin.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
       </map>
     </option>
