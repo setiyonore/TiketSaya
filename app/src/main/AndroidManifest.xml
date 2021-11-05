@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TiketSaya">
         <activity
+            android:name=".GetStartedAct"
+            android:exported="true" />
+        <activity
             android:name=".SplashAct"
             android:exported="true">
             <intent-filter>
