@@ -6,4 +6,10 @@
     <string name="username_label">Username</string>
     <string name="password_label">Password</string>
     <string name="label_create_new_account">Create New Account</string>
+    <string name="label_please_fill_register">
+        Please fill up the forms below <br/>
+        for information
+    </string>
+    <string name="label_email">Email Address</string>
+    <string name="label_continue">Continue</string>
 </resources>

@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class GetStartedAct extends AppCompatActivity {
-    Button btn_sign_in;
+    Button btn_sign_in, btn_new_account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,15 @@ public class GetStartedAct extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotosign = new Intent(GetStartedAct.this,SigninAct.class);
                 startActivity(gotosign);
+            }
+        });
+        btn_new_account = findViewById(R.id.btn_new_account);
+        btn_new_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoRegisterOne = new Intent(GetStartedAct.this,
+                        RegisterOnceAct.class);
+                startActivity(gotoRegisterOne);
             }
         });
     }
