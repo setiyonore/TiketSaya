@@ -7,9 +7,16 @@
     <string name="password_label">Password</string>
     <string name="label_create_new_account">Create New Account</string>
     <string name="label_please_fill_register">
-        Please fill up the forms below <br/>
+        Please fill up the forms below <br />
         for information
     </string>
     <string name="label_email">Email Address</string>
     <string name="label_continue">Continue</string>
+    <string name="label_selfie_time">Selfie Time</string>
+    <string name="label_let_the_wold_know">
+        Let the world know yourself <br/>
+        more better and ever
+    </string>
+    <string name="label_name">Nama</string>
+    <string name="label_bio">Bio</string>
 </resources>

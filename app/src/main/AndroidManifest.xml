@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TiketSaya">
         <activity
+            android:name=".RegisterTwoAct"
+            android:exported="true" />
+        <activity
             android:name=".RegisterOnceAct"
             android:exported="true" />
         <activity
