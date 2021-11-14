@@ -22,7 +22,14 @@
     <string name="label_explore">Explore Now</string>
     <string name="label_succes_registration">Registration Successful</string>
     <string name="label_success_regis_sub">
-        Welcome To Tiket Saya <br/>
+        Welcome To Tiket Saya <br />
         enjoy your holiday
     </string>
+    <string name="label_my_dashboard">
+        My Dashboard
+    </string>
+    <string name="label_main_menus">Main Menus</string>
+    <string name="label_main_menu_sub">Explore the beauty of the world</string>
+    <string name="label_ticket_tips">Ticket Tips</string>
+    <string name="label_sub_ticket_tips">Learn it for many benefits</string>
 </resources>
