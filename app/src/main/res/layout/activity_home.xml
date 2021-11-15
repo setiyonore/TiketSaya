@@ -52,14 +52,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
-            <ImageView
+            <io.github.florent37.shapeofview.shapes.CircleView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="29dp"
-                android:layout_marginTop="29dp"
-                android:src="@drawable/pic_dummy_angga"
+                android:layout_marginTop="93dp"
+                android:src="@drawable/icon_nopic"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/foto_home_user"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/anggaphoto" />
+
+            </io.github.florent37.shapeofview.shapes.CircleView>
 
             <TextView
                 android:id="@+id/textView3"
