@@ -32,4 +32,7 @@
     <string name="label_main_menu_sub">Explore the beauty of the world</string>
     <string name="label_ticket_tips">Ticket Tips</string>
     <string name="label_sub_ticket_tips">Learn it for many benefits</string>
+    <string name="label_information">Information</string>
+    <string name="label_sub_info">Knowing before travel</string>
+    <string name="label_buy_ticket">Buy Ticket</string>
 </resources>

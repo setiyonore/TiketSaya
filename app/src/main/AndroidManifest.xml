@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TiketSaya">
         <activity
+            android:name=".TicketDetailAct"
+            android:exported="true" />
+        <activity
             android:name=".HomeAct"
             android:exported="true" />
         <activity
