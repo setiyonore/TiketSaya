@@ -35,4 +35,10 @@
     <string name="label_information">Information</string>
     <string name="label_sub_info">Knowing before travel</string>
     <string name="label_buy_ticket">Buy Ticket</string>
+    <string name="label_ticket_detail">Ticket Details</string>
+    <string name="label_sub_ticket_detail">Check the amount of tickets</string>
+    <string name="label_pricing">Pricing</string>
+    <string name="label_your_current_balance">Your Current Balance</string>
+    <string name="label_total_price">Total Price</string>
+    <string name="label_pay_now">Pay Now</string>
 </resources>

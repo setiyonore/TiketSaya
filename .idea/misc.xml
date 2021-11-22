@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/drawable/bg_btn_blue_primary.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/drawable/bg_btn_green_primary.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/drawable/bg_btn_plus_blue.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/drawable/bg_btn_white_primary.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/drawable/bg_gradient_primary_blue.xml" value="0.34427083333333336" />
@@ -22,6 +23,7 @@
         <entry key="app/src/main/res/layout/activity_signin.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_success_register.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_ticket_checkout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_ticket_detail.xml" value="0.33" />
       </map>
     </option>
