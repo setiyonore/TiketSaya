@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TiketSaya">
         <activity
+            android:name=".MyProfileAct"
+            android:exported="true" />
+        <activity
             android:name=".SuccessBuyTicketAct"
             android:exported="true" />
         <activity

@@ -48,4 +48,8 @@
         Enjoy for your Holiday
     </string>
     <string name="label_view_ticket">View Ticket</string>
+    <string name="label_my_ticket">My Tickets</string>
+    <string name="label_sub_my_tickrt">Explore Beauty World</string>
+    <string name="label_edit_profile">Edit Profile</string>
+    <string name="label_sign_out">Sign Out</string>
 </resources>
