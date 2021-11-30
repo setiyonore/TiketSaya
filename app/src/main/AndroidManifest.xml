@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TiketSaya">
         <activity
+            android:name=".EditProfileAct"
+            android:exported="true" />
+        <activity
             android:name=".MyTicketDetailAct"
             android:exported="true" />
         <activity

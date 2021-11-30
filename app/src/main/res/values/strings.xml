@@ -51,5 +51,10 @@
     <string name="label_my_ticket">My Tickets</string>
     <string name="label_sub_my_tickrt">Explore Beauty World</string>
     <string name="label_edit_profile">Edit Profile</string>
+    <string name="label_edit_sub">
+        We highly suggest you to <br/>
+        use the correct information
+    </string>
     <string name="label_sign_out">Sign Out</string>
+    <string name="label_save_profile">Save Profile</string>
 </resources>
