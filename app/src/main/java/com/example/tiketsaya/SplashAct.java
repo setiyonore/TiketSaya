@@ -21,7 +21,7 @@ public class SplashAct extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         //load animation
         app_splash = AnimationUtils.loadAnimation(this,R.anim.app_splash);
-        btt = AnimationUtils.loadAnimation(this,R.anim.btt);
+        btt = AnimationUtils.loadAnimation(this,R.anim.bottom_to_top);
         //load element
         app_logo = findViewById(R.id.app_logo);
         app_subtitle = findViewById(R.id.app_subtitle);
