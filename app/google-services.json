@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "566720992794",
+    "firebase_url": "https://tiketsaya-ec8ad-default-rtdb.firebaseio.com/",
     "project_id": "tiketsaya-ec8ad",
     "storage_bucket": "tiketsaya-ec8ad.appspot.com"
   },

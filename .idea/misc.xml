@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/stynore/StudioProjects/TiketSaya/app/src/main/res/layout/activity_home.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/stynore/StudioProjects/TiketSaya/app/src/main/res/layout/activity_register_once.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/drawable/bg_btn_blue_primary.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/drawable/bg_btn_green_primary.xml" value="0.34427083333333336" />
