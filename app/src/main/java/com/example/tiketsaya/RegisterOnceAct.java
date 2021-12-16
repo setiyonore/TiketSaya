@@ -49,6 +49,8 @@ public class RegisterOnceAct extends AppCompatActivity {
         btn_continue_register_one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_continue_register_one.setEnabled(false);
+                btn_continue_register_one.setText("Loading...");
                 //menyimpan data ke local storage
                 SharedPreferences sharedPreferences =
                         getSharedPreferences(USERNAME_KEY,MODE_PRIVATE);
