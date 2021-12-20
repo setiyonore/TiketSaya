@@ -75,6 +75,7 @@ public class TicketDetailAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gotoCheckout = new Intent(TicketDetailAct.this,TicketCheckoutAct.class);
+                gotoCheckout.putExtra("jenis_tiket",jenis_tiket_baru);
                 startActivity(gotoCheckout);
             }
         });
