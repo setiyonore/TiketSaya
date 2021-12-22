@@ -2,7 +2,10 @@ package com.example.tiketsaya;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.icu.number.IntegerWidth;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -40,6 +43,23 @@ public class SuccessBuyTicketAct extends AppCompatActivity {
 
         btn_view_ticket.startAnimation(bottom_to_top);
         btn_my_dasboard.startAnimation(bottom_to_top);
+
+        //pindah activity
+        btn_my_dasboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoHome = new Intent(SuccessBuyTicketAct.this,HomeAct.class);
+                startActivity(gotoHome);
+            }
+        });
+
+        btn_view_ticket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoMyProfile = new Intent(SuccessBuyTicketAct.this,MyProfileAct.class);
+                startActivity(gotoMyProfile);
+            }
+        });
 
 
     }

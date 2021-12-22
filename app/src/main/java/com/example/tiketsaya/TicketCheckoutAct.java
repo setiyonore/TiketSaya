@@ -29,7 +29,7 @@ public class TicketCheckoutAct extends AppCompatActivity {
     Integer valueTotalHarga = 0;
     Integer valueHargaTiket = 0;
     ImageView notice_uang;
-    DatabaseReference reference, referenceUser, referenceTiket;
+    DatabaseReference reference, referenceUser, referenceTiket, referenceBalance;
     String USERNAME_KEY = "username_key";
     String username_key = "";
     String username_key_new;
@@ -37,6 +37,7 @@ public class TicketCheckoutAct extends AppCompatActivity {
 
     String date_wisata = "";
     String time_wisata = "";
+    Integer sisa_balance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,10 +157,12 @@ public class TicketCheckoutAct extends AppCompatActivity {
             public void onClick(View v) {
                 //meyimpan data user ke firebase dan membuat tabel baru "MyTickets"
                 referenceTiket = FirebaseDatabase.getInstance().getReference().child("MyTickets")
-                        .child(username_key_new).child(nama_wisata.getText().toString() + nomor_transaksi);
+                        .child(username_key_new).child(nama_wisata.getText().toString()+nomor_transaksi);
                 referenceTiket.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        referenceTiket.getRef().child("id_ticket").setValue(nama_wisata
+                                .getText().toString()+nomor_transaksi);
                         referenceTiket.getRef().child("nama_wisata").setValue(nama_wisata
                                 .getText().toString());
                         referenceTiket.getRef().child("lokasi").setValue(lokasi
@@ -173,6 +176,22 @@ public class TicketCheckoutAct extends AppCompatActivity {
                         Intent gotoSuccessTicket = new Intent(TicketCheckoutAct.this,
                                 SuccessBuyTicketAct.class);
                         startActivity(gotoSuccessTicket);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+                //mengupdate data sisa balance
+                referenceBalance = FirebaseDatabase.getInstance().getReference()
+                        .child("Users").child(username_key_new);
+                referenceBalance.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        sisa_balance = myBalance - valueTotalHarga;
+                        referenceBalance.getRef().child("user_balance")
+                                .setValue(sisa_balance);
                     }
 
                     @Override
