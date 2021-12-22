@@ -45,44 +45,61 @@ public class SigninAct extends AppCompatActivity {
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btn_sign_in.setText("Loading....");
-                btn_sign_in.setEnabled(false);
-                reference = FirebaseDatabase.getInstance().getReference().child("Users")
-                        .child(username.getText().toString());
-                reference.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.exists()){
-                            //ambil data password
-                            String passwordFromFirebase = dataSnapshot.child("password").getValue()
-                                    .toString();
-                            //validasi password
-                            if(password.getText().toString().equals(passwordFromFirebase)) {
-                                //simpan username ke local
-                                SharedPreferences sharedPreferences =
-                                        getSharedPreferences(USERNAME_KEY,MODE_PRIVATE);
-                                SharedPreferences.Editor editor = sharedPreferences.edit();
-                                editor.putString(username_key,username.getText().toString());
-                                editor.apply();
-                                //berpindah ke home
-                                Intent gotoHome = new Intent(SigninAct.this,HomeAct.class);
-                                startActivity(gotoHome);
+                if (username.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(),"Username Harus Diisi",
+                            Toast.LENGTH_SHORT).show();
+                    btn_sign_in.setText("Sign In");
+                    btn_sign_in.setEnabled(true);
+
+                } else if (password.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(),"Password Harus Diisi",
+                            Toast.LENGTH_SHORT).show();
+                    btn_sign_in.setText("Sign In");
+                    btn_sign_in.setEnabled(true);
+                } else {
+                    btn_sign_in.setText("Loading....");
+                    btn_sign_in.setEnabled(false);
+                    reference = FirebaseDatabase.getInstance().getReference().child("Users")
+                            .child(username.getText().toString());
+                    reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()){
+                                //ambil data password
+                                String passwordFromFirebase = dataSnapshot.child("password").getValue()
+                                        .toString();
+                                //validasi password
+                                if(password.getText().toString().equals(passwordFromFirebase)) {
+                                    //simpan username ke local
+                                    SharedPreferences sharedPreferences =
+                                            getSharedPreferences(USERNAME_KEY,MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    editor.putString(username_key,username.getText().toString());
+                                    editor.apply();
+                                    //berpindah ke home
+                                    Intent gotoHome = new Intent(SigninAct.this,HomeAct.class);
+                                    startActivity(gotoHome);
+                                } else {
+                                    Toast.makeText(getApplicationContext(),"Password Salah",
+                                            Toast.LENGTH_SHORT).show();
+                                    btn_sign_in.setText("Sign In");
+                                    btn_sign_in.setEnabled(true);
+                                }
+
                             } else {
-                                Toast.makeText(getApplicationContext(),"Password Salah",
+                                Toast.makeText(getApplicationContext(),"Username Tidak Ada",
                                         Toast.LENGTH_SHORT).show();
+                                btn_sign_in.setText("Sign In");
+                                btn_sign_in.setEnabled(true);
                             }
-
-                        } else {
-                            Toast.makeText(getApplicationContext(),"Username Tidak Ada",
-                                    Toast.LENGTH_SHORT).show();
                         }
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                    }
-                });
+                        }
+                    });
+                }
             }
         });
     }
