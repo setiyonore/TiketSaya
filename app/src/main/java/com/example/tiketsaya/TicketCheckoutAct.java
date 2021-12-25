@@ -30,7 +30,7 @@ public class TicketCheckoutAct extends AppCompatActivity {
     Integer valueHargaTiket = 0;
     ImageView notice_uang;
     DatabaseReference reference, referenceUser, referenceTiket, referenceBalance;
-    String USERNAME_KEY = "username_key";
+    String USERNAME_KEY = "usernamekey";
     String username_key = "";
     String username_key_new;
     Integer nomor_transaksi = new Random().nextInt();

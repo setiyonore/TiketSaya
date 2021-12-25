@@ -24,7 +24,7 @@ public class MyProfileAct extends AppCompatActivity {
     Button btn_edit_profile;
     TextView nama_lengkap,bio;
     ImageView photo_profile;
-    String USERNAME_KEY = "username_key";
+    String USERNAME_KEY = "usernamekey";
     String username_key = "";
     String username_key_new;
 
