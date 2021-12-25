@@ -39,18 +39,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/photo_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/anggaphoto" />
+            android:src="@drawable/icon_nopic" />
     </io.github.florent37.shapeofview.shapes.CircleView>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/nama_lengkap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/mmedium"
-        android:text="Setiyono Ressly"
         android:textColor="#FFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/view"
@@ -58,18 +58,17 @@
         app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/bio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/mlight"
-        android:text="Traveller"
         android:textAlignment="center"
         android:textColor="#FFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -86,7 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toBottomOf="@+id/bio">
 
         <TextView
             android:layout_width="wrap_content"
