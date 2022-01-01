@@ -31,8 +31,8 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_success_buy_ticket.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_success_register.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_ticket_checkout.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/activity_ticket_detail.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_ticket_checkout.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_ticket_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_myticket.xml" value="0.32395833333333335" />
       </map>
     </option>
