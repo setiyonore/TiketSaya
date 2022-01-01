@@ -169,7 +169,7 @@ public class TicketCheckoutAct extends AppCompatActivity {
                                 .getText().toString());
                         referenceTiket.getRef().child("ketentuan").setValue(ketentuan
                                 .getText().toString());
-                        referenceTiket.getRef().child("jumlah_tiket").setValue(valueJumlahTiket);
+                        referenceTiket.getRef().child("jumlah_tiket").setValue(valueJumlahTiket.toString());
                         referenceTiket.getRef().child("date_wisata")
                                 .setValue(date_wisata);
                         referenceTiket.getRef().child("time_wisata").setValue(time_wisata);

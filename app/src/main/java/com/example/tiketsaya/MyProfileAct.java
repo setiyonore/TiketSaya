@@ -2,6 +2,8 @@ package com.example.tiketsaya;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,6 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+
 public class MyProfileAct extends AppCompatActivity {
     LinearLayout item_my_ticket;
     Button btn_edit_profile;
@@ -27,8 +31,11 @@ public class MyProfileAct extends AppCompatActivity {
     String USERNAME_KEY = "usernamekey";
     String username_key = "";
     String username_key_new;
+    RecyclerView myticket_place;
+    ArrayList<MyTicket> list;
+    TicketAdapter ticketAdapter;
 
-    DatabaseReference reference;
+    DatabaseReference reference, myTickets;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +47,9 @@ public class MyProfileAct extends AppCompatActivity {
         nama_lengkap = findViewById(R.id.nama_lengkap);
         bio = findViewById(R.id.bio);
         photo_profile = findViewById(R.id.photo_profile);
+        myticket_place = findViewById(R.id.myticket_place);
+        myticket_place.setLayoutManager(new LinearLayoutManager(this));
+        list = new ArrayList<MyTicket>();
 
         reference = FirebaseDatabase.getInstance().getReference().child("Users")
                 .child(username_key_new);
@@ -60,21 +70,30 @@ public class MyProfileAct extends AppCompatActivity {
             }
         });
 
-        item_my_ticket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoMyTicketDetail = new Intent(MyProfileAct.this,
-                        MyTicketDetailAct.class);
-                startActivity(gotoMyTicketDetail);
-            }
-        });
-
         btn_edit_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent gotoEditProfile = new Intent(MyProfileAct.this,
                         EditProfileAct.class);
                 startActivity(gotoEditProfile);
+            }
+        });
+        myTickets = FirebaseDatabase.getInstance().getReference().child("MyTickets")
+                .child(username_key_new);
+        myTickets.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
+                    MyTicket myTicket = dataSnapshot1.getValue(MyTicket.class);
+                    list.add(myTicket);
+                }
+                ticketAdapter = new TicketAdapter(MyProfileAct.this, list);
+                myticket_place.setAdapter(ticketAdapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }
