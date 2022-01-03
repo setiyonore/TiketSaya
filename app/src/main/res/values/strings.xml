@@ -41,6 +41,7 @@
     <string name="label_your_current_balance">Your Current Balance</string>
     <string name="label_total_price">Total Price</string>
     <string name="label_pay_now">Pay Now</string>
+    <string name="label_refund_now">Refund Now</string>
     <string name="label_success_buy_ticket">
         Buy Ticket Successfull
     </string>
