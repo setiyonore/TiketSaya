@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 public class MyProfileAct extends AppCompatActivity {
     LinearLayout item_my_ticket;
-    Button btn_edit_profile, btn_back_home;
+    Button btn_edit_profile, btn_back_home, btn_sign_out;
     TextView nama_lengkap,bio;
     ImageView photo_profile;
     String USERNAME_KEY = "usernamekey";
@@ -48,6 +48,7 @@ public class MyProfileAct extends AppCompatActivity {
         bio = findViewById(R.id.bio);
         photo_profile = findViewById(R.id.photo_profile);
         btn_back_home = findViewById(R.id.btn_back_home);
+        btn_sign_out = findViewById(R.id.btn_sign_out);
         myticket_place = findViewById(R.id.myticket_place);
         myticket_place.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<MyTicket>();
@@ -103,6 +104,21 @@ public class MyProfileAct extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotoHome = new Intent(MyProfileAct.this,HomeAct.class);
                 startActivity(gotoHome);
+            }
+        });
+
+        btn_sign_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sharedPreferences =
+                        getSharedPreferences(USERNAME_KEY,MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(username_key,null);
+                editor.apply();
+
+                Intent gotoSignIn = new Intent(MyProfileAct.this,SigninAct.class);
+                startActivity(gotoSignIn);
+                finish();
             }
         });
     }
