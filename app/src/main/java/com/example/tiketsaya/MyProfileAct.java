@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 public class MyProfileAct extends AppCompatActivity {
     LinearLayout item_my_ticket;
-    Button btn_edit_profile;
+    Button btn_edit_profile, btn_back_home;
     TextView nama_lengkap,bio;
     ImageView photo_profile;
     String USERNAME_KEY = "usernamekey";
@@ -47,6 +47,7 @@ public class MyProfileAct extends AppCompatActivity {
         nama_lengkap = findViewById(R.id.nama_lengkap);
         bio = findViewById(R.id.bio);
         photo_profile = findViewById(R.id.photo_profile);
+        btn_back_home = findViewById(R.id.btn_back_home);
         myticket_place = findViewById(R.id.myticket_place);
         myticket_place.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<MyTicket>();
@@ -94,6 +95,14 @@ public class MyProfileAct extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        btn_back_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoHome = new Intent(MyProfileAct.this,HomeAct.class);
+                startActivity(gotoHome);
             }
         });
     }
